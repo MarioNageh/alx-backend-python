@@ -17,7 +17,7 @@
 ## Tasks
 
 | Task | File |
-| ---- | ----- |
+| ---- | ---- |
 | 0. Basic annotations - add | [0-add.py](./0-add.py) |
 | 1. Basic annotations - concat | [1-concat.py](./1-concat.py) |
 | 2. Basic annotations - floor | [2-floor.py](./2-floor.py) |
