@@ -13,16 +13,15 @@ task_wait_random = __import__("3-tasks").task_wait_random
 async def task_wait_n(n: int, max_delay: int) -> List[float]:
     """
     task_wait_n
-    @n: times to call wait_random
-    @max_delay: max delay of wait_random
+    @n: times to call task_wait_random
+    @max_delay: max delay of task_wait_random
     Return: list of all delays
     """
 
-    delays: List[asyncio.Future[float]] = []
+    dly: List[asyncio.Future[float]] = []
     for _ in range(n):
-        delays.append(task_wait_random(max_delay))
-
-    result: List[float] = []
-    for delay in asyncio.as_completed(delays):
-        result.append(await delay)
-    return result
+        dly.append(task_wait_random(max_delay))
+    res: List[float] = []
+    for delay in asyncio.as_completed(dly):
+        res.append(await delay)
+    return res
